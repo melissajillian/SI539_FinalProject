@@ -348,7 +348,7 @@ input[type="checkbox"]:checked + .nav-links {
 }
 
 .character-card:hover, .divedeeper-card:hover, .quiz-card:hover {
-    transform: scale(1.05); /* Makes the card grow by 5% in both width and height - got help form w3schools */
+    transform: scale(1.05); /* Makes the card grow in both width and height - got help from w3schools */
     box-shadow: 0 10px 24px #34133a; /* the shadow is lighter than the one above */
 }
 
@@ -364,7 +364,7 @@ input[type="checkbox"]:checked + .nav-links {
 .character-card p, .divedeeper-card p, .quiz-card p {
     margin: 0;
     line-height: 1.4;
-    font-size: 1rem;
+    font-size: 0.8em;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* wanted it to pop from the picture more - got help from w3schools */
 }
 
@@ -470,7 +470,7 @@ input[type="checkbox"]:checked + .nav-links {
 .jinx-card:hover, .vi-card:hover, .vander-card:hover, .silco-card:hover, .jayce-card:hover, .viktor-card:hover, .heimerdinger-card:hover,
 .ekko-card:hover, .mel-card:hover, .caitlyn-card:hover, .sevika-card:hover, .isha-card:hover, .ambessa-card:hover,
 .maddie-card:hover, .singed-card:hover {
-    transform: scale(1.05); /* Makes the card grow by 5% in both width and height - got help form w3schools */
+    transform: scale(1.05); /* Makes the card grow in both width and height - got help from w3schools */
     box-shadow: 0 10px 24px #34133a; /* the shadow is lighter than the one above */
 }
 
@@ -488,7 +488,7 @@ input[type="checkbox"]:checked + .nav-links {
 .caitlyn-card p, .sevika-card p, .isha-card p, .ambessa-card p, .maddie-card p, .singed-card p {
     margin: 0;
     line-height: 1.4;
-    font-size: 16px;
+    font-size: 0.8em;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* wanted it to pop from the picture more - got help from w3schools */
 }
 
@@ -654,7 +654,7 @@ input[type="checkbox"]:checked + .nav-links {
 
 .sisters-card:hover, .theme-card:hover, .visuals-card:hover, .science-card:hover, .trauma-card:hover, .divide-card:hover, .power-card:hover,
 .innovation-card:hover, .revolution-card:hover {
-    transform: scale(1.03); /* Makes the card grow by 5% in both width and height - got help form w3schools */
+    transform: scale(1.03); /* Makes the card grow in both width and height - got help from w3schools */
     box-shadow: 0 10px 24px #34133a; /* the shadow is lighter than the one above */
 }
 
@@ -668,7 +668,7 @@ input[type="checkbox"]:checked + .nav-links {
 .sisters-card p, .theme-card p, .visuals-card p, .science-card p, .trauma-card p, .divide-card p, .power-card p, .innovation-card p,
 .revolution-card p {
     margin: 5px 0 0;
-    font-size: 1rem; /* 16px */
+    font-size: 0.8em;
 }
 
 /* Individual background images for the cards */
@@ -753,6 +753,8 @@ input[type="checkbox"]:checked + .nav-links {
 
 .caption-title {
     font-size: 1.1em;
+    color: #CCCCCC;
+    text-shadow: 0 0 2px #1E90FF; /* Glow effect - got help from w3schools */
 }
 
 /* Style for the text blocks in the grid (after the 3 pictures) */
@@ -795,17 +797,24 @@ input[type="checkbox"]:checked + .nav-links {
 }
 
 .question-page h2 {
-    font-size: 1.6em; /* changed size */
+    font-size: 1.7em; /* changed size */
     font-weight: bold;
     margin-bottom: 20px;
     margin-top: 40px;
 }
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
 
 /* Results container */
 .result-container {
     display: none; /* result page is hidden by default */
     text-align: center;
     margin-top: 30px;
+    font-size: 1.5em;
 }
 
 button {
@@ -871,12 +880,6 @@ input[type="radio"] {
     text-align: center;
 }
 
-.result-container {
-    display: none; /* Initially hidden */
-    font-size: 1.5em;
-    padding: 30px;
-}
-
 .result-container.active {
     display: block; /* Show when active */
 }
@@ -889,12 +892,12 @@ input[type="radio"] {
 }
 
 .result-container h2 {
-    font-size: 1.2em; /* smaller than default h3 */
+    font-size: 1.05em;
     margin-bottom: 10px;
 }
 
 .result-container p {
-    font-size: 0.8em; /* you can go lower like 0.95em if still too big */
+    font-size: 0.8em;
     line-height: 1.4;
     margin-bottom: 20px;
     padding: 30px;
@@ -937,7 +940,7 @@ input[type="radio"] {
     display: none; /* This hides the hamburger menu and checkbox on desktop */
 }
 
-/* styling for the main header/nav bar on the main page, index.html */
+/* styling for the main header/nav bar */
 .header-container {
     display: flex; /* flexbox */
     position: fixed; /* stays fixed at the top of the page while scrolling */
@@ -979,7 +982,7 @@ input[type="radio"] {
 
 .nav-links {
     display: flex !important; /* flexbox - !imprtant needs to be there because it won't display otherwise and idk why */
-    justify-content: flex-end;
+    justify-content: flex-end; /* I want them on the right */
     z-index: 1000;
     margin: 0;
     gap: 0;
@@ -990,7 +993,7 @@ input[type="radio"] {
 .nav-links ul {
     display: flex; /* flexbox */
     justify-content: flex-end;
-    text-align: end !important;
+    text-align: end !important; /* putting !important because it won't happen unless I do this and idk why*/
     margin: 0;
     padding: 0;
 }
@@ -1195,7 +1198,7 @@ input[type="radio"] {
 }
 
 .character-card:hover, .divedeeper-card:hover, .quiz-card:hover {
-    transform: scale(1.05); /* Makes the card grow by 5% in both width and height - got help form w3schools */
+    transform: scale(1.05); /* Makes the card grow in both width and height - got help from w3schools */
     box-shadow: 0 10px 24px #34133a; /* the shadow is lighter than the one above */
 }
 
@@ -1211,7 +1214,7 @@ input[type="radio"] {
 .character-card p, .divedeeper-card p, .quiz-card p {
     margin: 0;
     line-height: 1.4;
-    font-size: 1rem;
+    font-size: 0.9em;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* wanted it to pop from the picture more - got help from w3schools */
 }
 
@@ -1314,7 +1317,7 @@ input[type="radio"] {
 .jinx-card:hover, .vi-card:hover, .vander-card:hover, .silco-card:hover, .jayce-card:hover, .viktor-card:hover, .heimerdinger-card:hover,
 .ekko-card:hover, .mel-card:hover, .caitlyn-card:hover, .sevika-card:hover, .isha-card:hover, .ambessa-card:hover,
 .maddie-card:hover, .singed-card:hover {
-    transform: scale(1.05); /* Makes the card grow by 5% in both width and height - got help form w3schools */
+    transform: scale(1.05); /* Makes the card grow in both width and height - got help from w3schools */
     box-shadow: 0 10px 24px #34133a; /* the shadow is lighter than the one above */
 }
 
@@ -1332,7 +1335,7 @@ input[type="radio"] {
 .caitlyn-card p, .sevika-card p, .isha-card p, .ambessa-card p, .maddie-card p, .singed-card p {
     margin: 0;
     line-height: 1.4;
-    font-size: 16px;
+    font-size: 0.9em;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* wanted it to pop from the picture more - got help from w3schools */
 }
 
@@ -1421,9 +1424,6 @@ input[type="radio"] {
     z-index: 2; /* Brings text above the gradient */
 }
 
-/* Best viewed at 1200 and in that range  */
-
-
 /* analysis page styling */
 .analysis-main {
     padding-top: 100px; /* Adjusted based on nav height */
@@ -1498,7 +1498,7 @@ input[type="radio"] {
 
 .sisters-card:hover, .theme-card:hover, .visuals-card:hover, .science-card:hover, .trauma-card:hover, .divide-card:hover, .power-card:hover,
 .innovation-card:hover, .revolution-card:hover {
-    transform: scale(1.03); /* Makes the card grow by 5% in both width and height - got help form w3schools */
+    transform: scale(1.03); /* Makes the card grow in both width and height - got help from w3schools */
     box-shadow: 0 10px 24px #34133a; /* the shadow is lighter than the one above */
 }
 
@@ -1512,7 +1512,7 @@ input[type="radio"] {
 .sisters-card p, .theme-card p, .visuals-card p, .science-card p, .trauma-card p, .divide-card p, .power-card p, .innovation-card p,
 .revolution-card p {
     margin: 5px 0 0;
-    font-size: 1rem; /* 16px */
+    font-size: 0.9em;
 }
 
 /* Individual background images for the cards */
@@ -1594,6 +1594,8 @@ input[type="radio"] {
 
 .caption-title {
     font-size: 1.1em;
+    color: #CCCCCC;
+    text-shadow: 0 0 2px #1E90FF; /* Glow effect - got help from w3schools */
 }
 
 /* Style for the text blocks in the grid (after 3 pictures) */
@@ -1645,6 +1647,7 @@ input[type="radio"] {
     display: none; /* result page is hidden by default */
     text-align: center;
     margin-top: 30px;
+    font-size: 1.5em;
 }
 
 button {
@@ -1683,7 +1686,7 @@ button:hover {
 }
 
 label {
-    margin-bottom: 10px; /* adds 10 pixels of space below each label */
+    margin-bottom: 10px; /* adds space below each label */
     display: block;
     font-size: 1.2em;
 }
@@ -1706,12 +1709,6 @@ input[type="radio"] {
     text-align: center;
 }
 
-.result-container {
-    display: none; /* Initially hidden */
-    font-size: 1.5em;
-    padding: 30px;
-}
-
 .result-container.active {
     display: block; /* Show when active */
 }
@@ -1723,13 +1720,17 @@ input[type="radio"] {
     margin: 0 auto 20px;  /* Adds space below the image */
 }
 
+.result-container h2 {
+    font-size: 1.2em;
+}
+
 .result-container h3 {
     font-size: 1.2em; /* smaller than default h3 */
     margin-bottom: 10px;
 }
 
 .result-container p {
-    font-size: 0.8em; /* you can go lower like 0.95em if still too big */
+    font-size: 0.8em;
     line-height: 1.4;
     margin-bottom: 20px;
     padding: 30px;
@@ -1800,8 +1801,8 @@ input[type="radio"] {
 }
 
 .nav-links {
-    display: flex !important; /* flexbox - !imprtant needs to be there because it won't display otherwise and idk why */
-    justify-content: flex-end;
+    display: flex !important; /* flexbox - !improtant needs to be there because it won't display otherwise and idk why */
+    justify-content: flex-end; /* so that the links are on the right side */
     z-index: 1000;
     margin: 0;
     gap: 0;
@@ -1812,7 +1813,7 @@ input[type="radio"] {
 .nav-links ul {
     display: flex; /* flexbox */
     justify-content: flex-end;
-    text-align: end !important;
+    text-align: end !important; /* !important is there because it won't actually align like this otherwise*/
     margin: 0;
     padding: 0;
 }
@@ -2016,7 +2017,7 @@ input[type="radio"] {
 }
 
 .character-card:hover, .divedeeper-card:hover, .quiz-card:hover {
-    transform: scale(1.05); /* Makes the card grow by 5% in both width and height - got help form w3schools */
+    transform: scale(1.05); /* Makes the card grow in both width and height - got help from w3schools */
     box-shadow: 0 10px 24px #34133a; /* the shadow is lighter than the one above */
 }
 
@@ -2032,7 +2033,7 @@ input[type="radio"] {
 .character-card p, .divedeeper-card p, .quiz-card p {
     margin: 0;
     line-height: 1.4;
-    font-size: 1rem;
+    font-size: 0.9em;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* wanted it to pop from the picture more - got help from w3schools */
 }
 
@@ -2134,7 +2135,7 @@ input[type="radio"] {
 .jinx-card:hover, .vi-card:hover, .vander-card:hover, .silco-card:hover, .jayce-card:hover, .viktor-card:hover, .heimerdinger-card:hover,
 .ekko-card:hover, .mel-card:hover, .caitlyn-card:hover, .sevika-card:hover, .isha-card:hover, .ambessa-card:hover,
 .maddie-card:hover, .singed-card:hover {
-    transform: scale(1.05); /* Makes the card grow by 5% in both width and height - got help form w3schools */
+    transform: scale(1.05); /* Makes the card grow in both width and height - got help from w3schools */
     box-shadow: 0 10px 24px #34133a; /* the shadow is lighter than the one above */
 }
 
@@ -2152,7 +2153,7 @@ input[type="radio"] {
 .caitlyn-card p, .sevika-card p, .isha-card p, .ambessa-card p, .maddie-card p, .singed-card p {
     margin: 0;
     line-height: 1.4;
-    font-size: 16px;
+    font-size: 0.9em;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* wanted it to pop from the picture more - got help from w3schools */
 }
 
@@ -2241,9 +2242,6 @@ input[type="radio"] {
     z-index: 2; /* Brings text above the gradient */
 }
 
-/* Best viewed at 1200 and in that range  */
-
-
 /* analysis page styling */
 .analysis-main {
     padding-top: 100px; /* Adjusted based on nav height */
@@ -2318,7 +2316,7 @@ input[type="radio"] {
 
 .sisters-card:hover, .theme-card:hover, .visuals-card:hover, .science-card:hover, .trauma-card:hover, .divide-card:hover, .power-card:hover,
 .innovation-card:hover, .revolution-card:hover {
-    transform: scale(1.03); /* Makes the card grow by 5% in both width and height - got help form w3schools */
+    transform: scale(1.03); /* Makes the card grow in both width and height - got help from w3schools */
     box-shadow: 0 10px 24px #34133a; /* the shadow is lighter than the one above */
 }
 
@@ -2332,7 +2330,7 @@ input[type="radio"] {
 .sisters-card p, .theme-card p, .visuals-card p, .science-card p, .trauma-card p, .divide-card p, .power-card p, .innovation-card p,
 .revolution-card p {
     margin: 5px 0 0;
-    font-size: 1rem; /* 16px */
+    font-size: 0.975em;
 }
 
 /* Individual background images for the cards */
@@ -2414,6 +2412,8 @@ input[type="radio"] {
 
 .caption-title {
     font-size: 1.1em;
+    color: #CCCCCC;
+    text-shadow: 0 0 2px #1E90FF; /* Glow effect - got help from w3schools */
 }
 
 /* Style for the text blocks in the grid (after 3 pictures) */
@@ -2455,7 +2455,7 @@ input[type="radio"] {
 }
 
 .question-page h2 {
-    font-size: 1.6em; /* changed size */
+    font-size: 1.7em;
     font-weight: bold;
     margin-bottom: 20px;
 }
@@ -2465,6 +2465,7 @@ input[type="radio"] {
     display: none; /* result page is hidden by default */
     text-align: center;
     margin-top: 30px;
+    font-size: 1.5em;
 }
 
 button {
@@ -2526,21 +2527,19 @@ input[type="radio"] {
     text-align: center;
 }
 
-.result-container {
-    display: none; /* Initially hidden */
-    font-size: 1.5em;
-    padding: 30px;
-}
-
 .result-container.active {
     display: block; /* Show when active */
 }
 
 .result-container img {
-    max-width: 50%; /* can only get this big */
+    max-width: 30%; /* can only get this big */
     height: auto;
     display: block;
     margin: 0 auto 20px;  /* Adds space below the image */
+}
+
+.result-container h2 {
+    font-size: 1.2em;
 }
 
 .result-container h3 {
@@ -2549,23 +2548,23 @@ input[type="radio"] {
 }
 
 .result-container p {
-    font-size: 0.8em; /* you can go lower like 0.95em if still too big */
+    font-size: 0.8em;
     line-height: 1.4;
     margin-bottom: 20px;
     padding: 30px;
 }
 
-/* match styling to others */
-#restartQuizBtn {
+/* match styling to others - restart is not working */
+/* #restartQuizBtn {
     margin-top: 20px;
     padding: 10px 20px;
     background-color: #C71585; /* matching the color to the other buttons */
-    color: white;
+    /* color: white;
     border: none;
-    cursor: pointer; /* when mouse is on button = pointer */
-}
+    cursor: pointer; when mouse is on button = pointer */
 
-#restartQuizBtn:hover {
-    background-color: #921062; /* when hovered over, it gets darker */
-}
+/* #restartQuizBtn:hover {
+    background-color: #921062; when hovered over, it gets darker
+}*/
+
 }
